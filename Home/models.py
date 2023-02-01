@@ -23,5 +23,3 @@ class Package(BaseModel):
 class PackageImage(BaseModel):
     product = models.ForeignKey(Package, on_delete=models.CASCADE, null=True, blank=True)
     image = models.ImageField(upload_to='package_image', null=True, blank=True)
-    def __str__(self):
-        return self.product.name
