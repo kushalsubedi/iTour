@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <style>
+      .image-container {
+        text-align: center;
+      }
+      img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 1px solid gray;
+        cursor: pointer;
+      }
+      p {
+        font-size: 14px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="image-container">
+      <img id="img" src="https://picsum.photos/200" alt="Image">
+      <p id="desc">Default description</p>
+    </div>
+
+    <script>
+      const img = document.getElementById("img");
+      const desc = document.getElementById("desc");
+
+      img.addEventListener("mouseover", function () {
+        desc.innerHTML = "Mouse over description";
+      });
+
+      img.addEventListener("mouseout", function () {
+        desc.innerHTML = "Default description";
+      });
+    </script>
+  </body>
+</html>
